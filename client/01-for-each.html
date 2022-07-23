@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div> 
+    <script>
+        const products = [
+            { title: 'Learn HTML', status: "Complete" },
+            { title: 'LEARN CSS', status: "Complete" },
+            { title: 'LEARN JS', status: "Inomplete" },
+            { title: 'LEARN GIT', status: "Complete" },
+            { title: 'LEARN PHP', status: "Incomplete" },
+        ];
+        const app = document.querySelector('#app');
+        products.forEach(product => {
+            app.innerHTML += `<li>${product.title} - ${product.status} <input type="checkbox"> <li>`;
+        })
+    </script>
+</body>
+</html>
