@@ -20,3 +20,15 @@ const newAppoinment = {
     startDate: new Date(2021, 1, 1, 19),
     endDate: new Date(2021, 1, 1, 20, 30),
 };
+
+const areIntervalsOverlapping = require('date-fns/areIntervalsOverlapping');
+
+const isOverLap = (newDate) => {
+    return dates.some(date => {
+        return areIntervalsOverlapping(
+            {start: date.startDate, end: date.endDate},
+            {start: newDate.startDate, end: date.endDate},
+        )
+    })
+} 
+console.log(isOverLap(newAppoinment));
